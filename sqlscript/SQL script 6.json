@@ -1,8 +1,8 @@
 {
-	"name": "SQL script 4",
+	"name": "SQL script 6",
 	"properties": {
 		"content": {
-			"query": "SELECT * from EmployeeStage",
+			"query": "",
 			"metadata": {
 				"language": "sql"
 			},

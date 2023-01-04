@@ -2,7 +2,7 @@
 	"name": "SQL script 3",
 	"properties": {
 		"content": {
-			"query": "CREATE PROC [dbo].[Proceduresp]\n\nAS\nBEGIN \n\nMERGE into Employee as TGT\nUSING SRC\nON TGT.ID = SRC.ID\nWHEN MATCHED THEN\nUPDATE SET\n        TGT.Name = SRC.Name,\n        TGT.Jobtitle = SRC.Title,\n        TGT.lastmodified = SRC.lastmodified\n\nWHEN NOT MATCHED THEN      \nINSERT (\n        ID,\n        Name,\n        Jobtitle,\n        lastmodified\n)\n\nvalues(\n        SRC.ID,\n        SRC.Name,\n        SRC.Jobtitle,\n        SRC.lastmodified\n)\n\nEND\n",
+			"query": "CREATE PROC [dbo].[Proceduresp]\n\nAS\nBEGIN \n\nMERGE into Employee as TGT\nUSING EmployeeStage SRC\nON TGT.ID = SRC.ID\nWHEN MATCHED THEN\nUPDATE SET\n        TGT.Name = SRC.Name,\n        TGT.Jobtitle = SRC.Jobitle,\n        TGT.lastmodified = SRC.lastmodified\n\nWHEN NOT MATCHED THEN      \nINSERT (\n        ID,\n        Name,\n        Jobtitle,\n        lastmodified\n)\n\nvalues(\n        SRC.ID,\n        SRC.Name,\n        SRC.Jobtitle,\n        SRC.lastmodified\n)\n\nEND\n",
 			"metadata": {
 				"language": "sql"
 			},
