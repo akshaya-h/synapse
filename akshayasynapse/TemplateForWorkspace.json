@@ -131,7 +131,7 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "Create table Employee(ID int,Name VARCHAR(50),Jobtitle VARCHAR(50))",
+					"query": "Create table EmployeeStage(ID int,Name VARCHAR(50),Jobtitle VARCHAR(50))",
 					"metadata": {
 						"language": "sql"
 					},
