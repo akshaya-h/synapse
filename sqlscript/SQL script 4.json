@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 4",
+	"properties": {
+		"content": {
+			"query": "SET ANSI_NULLS ON\nGO\nSET QUOTED_IDENTIFIER ON\nGO\n\nCREATE TABLE [dbo].[Employee]\n( \n\t[ID] [int]  NULL,\n\t[Name] [varchar](50)  NULL,\n\t[Jobtitle] [varchar](50)  NULL,\n\t[lastmodified] [datetime]  NULL\n)\nWITH\n(\n\tDISTRIBUTION = HASH ( [ID] ),\n\tCLUSTERED COLUMNSTORE INDEX\n)\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AzureLearn",
+				"poolName": "AzureLearn"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
